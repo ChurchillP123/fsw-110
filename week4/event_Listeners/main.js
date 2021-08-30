@@ -38,7 +38,7 @@ square.addEventListener('dblclick', function(){
     square.style.backgroundColor = 'red';
 });
 
-window.addEventListener('scroll', function(){
+window.addEventListener('wheel', function(){
     square.style.backgroundColor = 'purple';
 })
 
@@ -47,8 +47,8 @@ function setSquareBackgroundColor(color) {
 }
 
 window.addEventListener('keydown', function(event){
-   switch(event.which) {
-       case 82:
+    switch(event.which) {
+        case 82:
            setSquareBackgroundColor('red');
            break;
         case 71:
@@ -57,5 +57,11 @@ window.addEventListener('keydown', function(event){
         case 66:
             setSquareBackgroundColor('blue');
             break;
-   }
+        case 89:
+            setSquareBackgroundColor('yellow');
+            break;
+        case 80:
+            setSquareBackgroundColor('purple');
+            break;
+    }
 });
