@@ -60,10 +60,15 @@ for (let i = 0; i < inputs.length; i++) {
 }
 
 let h2 = document.createElement('h2');
-h2.textContent = 'Answers';
+h2.textContent = 'Answer:';
 document.body.appendChild(h2);
-let ul = document.createElement('ul');
-document.body.appendChild(ul);
+let inputAnswer = document.createElement('input');
+inputAnswer.style.border = '2px solid black';
+document.body.appendChild(inputAnswer);
+let clear = document.createElement('button');
+clear.textContent = 'Clear';
+clear.style.marginLeft = '10px';
+document.body.appendChild(clear);
 
 //event Handlers to take care of if user did not enter a number
 answer.addEventListener('click', function(){
@@ -71,9 +76,7 @@ answer.addEventListener('click', function(){
         alert('Enter a number first');
     }
     else {
-        let li = document.createElement('li');
-        li.textContent = Number(firstNum.value) + Number(secondNum.value);
-        ul.appendChild(li);
+        inputAnswer.value = Number(firstNum.value) + Number(secondNum.value);
     }
 });
 
@@ -82,9 +85,7 @@ answer2.addEventListener('click', function(){
         alert('Enter a number first');
 
     } else {
-        let li = document.createElement('li');
-        li.textContent = Number(first.value) - Number(second.value);
-        ul.appendChild(li);
+        inputAnswer.value = Number(first.value) - Number(second.value);
     }
 });
 
@@ -93,8 +94,10 @@ answer3.addEventListener('click', function(){
         alert('Enter a number first');
     
     } else {
-        let li = document.createElement('li');
-        li.textContent = Number(one.value) * Number(two.value);
-        ul.appendChild(li);
+        inputAnswer.value = Number(one.value) * Number(two.value);
     }
+});
+
+clear.addEventListener('click', function(){
+    document.querySelectorAll('input').forEach(input => input.value = null);
 });
