@@ -2,7 +2,7 @@
 // use "e.preventDefault()" in the first line of your callback function to prevent this
 // remember to pass "e" into the callback function
 
-let submit = document.getElementById('submit');
-submit.addEventListener('submit', function(e) {
+let form = document.getElementById('submit-me');
+form.addEventListener('submit', function(e) {
     e.preventDefault();
 });
