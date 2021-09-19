@@ -1,0 +1,110 @@
+/* Common Breakpoints
+Mobile: 360 x 720
+Tablet: 768 x 1024
+Laptop: 1366 x 768
+High-res laptop or desktop: 1920 x 1080 */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+h1 {
+    text-align: center;
+}
+
+#user-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr auto auto 0.5fr;
+    gap: 5px;
+}
+
+h2 {
+    align-self: center;
+}
+
+.flex-box {
+    display: flex;
+    margin-left: 0px;
+    gap: 5px;
+}
+
+#submit {
+    width: fit-content;
+    
+}
+
+header {
+    background-color: black;
+    color: white;
+    font-family: 'Cinzel', 'serif';
+}
+
+footer {
+    text-align: center;
+}
+
+#todo-list {
+    
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    padding: 0;
+}
+
+    
+ul button {
+    margin-left: 5px;
+}
+
+.parentList {
+    margin-top: 1.25vh;
+    max-width: 100%;
+    word-wrap: break-word;
+    background-color: lightblue;
+    margin-bottom: 1.25vh;
+    border: 2px solid black;
+    box-shadow: 0px 8px 8px black;
+    padding: 5px;
+
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    #user-input {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #title, #description {
+        width: 550px;
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .parentList {
+        width: 75%;
+        margin: 10px auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
